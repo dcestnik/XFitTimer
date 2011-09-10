@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/stopwatch_menu" android:id="@+id/stopwatch_menu"></item>
+    <item android:title="@string/timer_menu" android:id="@+id/timer_menu"></item>
+    <item android:id="@+id/round_menu" android:title="@string/round_menu"></item>
+    <item android:id="@+id/interval_menu" android:title="@string/interval_menu"></item>
+    <item android:id="@+id/tabata_menu" android:title="@string/tabata_menu"></item>
+    <item android:id="@+id/quit_menu" android:title="@string/quit_menu"></item>
+</menu>

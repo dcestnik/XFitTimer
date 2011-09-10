@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Crossfit Timer</string>
+	<string name="start_button">Start</string>
+	<string name="reset_button">Reset</string>
+	<string name="submit_button">Submit</string>
+	<string name="alert_dialog_title">Timer Finished</string>
+	<string name="input_error_dialog_title">Invalid Input</string>
+	<string name="alert_dialog_button">OK</string>
+
+	<string name="stopwatch_menu">Stop Watch</string>
+	<string name="stopwatch_subtitle">Stopwatch</string>
+
+	<string name="timer_menu">Timer</string>
+	<string name="timer_subtitle">Timer</string>
+	<string name="timer_dialog_title">Timer Configuration</string>
+	<string name="timer_dialog_subtitle">Minutes and Seconds</string>
+	<string name="timer_message">Goal is %d seconds</string>
+
+	<string name="round_menu">Rounds</string>
+	<string name="round_subtitle">Round Timer</string>
+	<string name="round_dialog_title">Rounds Configuration</string>
+	<string name="round_dialog_subtitle">Rounds</string>
+	<string name="round_dialog_subtitle2">Minutes and Seconds</string>
+	<string name="round_message" formatted="false">Round %d of %d @ %d seconds/round</string>
+
+	<string name="interval_menu">Intervals</string>
+	<string name="interval_subtitle">Intervals</string>
+
+	<string name="interval_dialog_title">Interval Configuration</string>
+	<string name="interval_dialog_subtitle">Select number of intervals</string>
+	<string name="interval_dialog_subtitle2">Select on and off time</string>
+	<string name="interval_message" formatted="false">Round %d of %d @ %d/%d seconds/round</string>
+
+	<string name="tabata_menu">Tabata</string>
+	<string name="tabata_subtitle">Tabata Intervals</string>
+
+	<string name="quit_menu">Quit</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<TextView android:text="@string/timer_dialog_subtitle" style="@style/FullWidthVertical"></TextView>
+	<LinearLayout style="@style/FullWidthVertical">
+		<Spinner android:id="@+id/TimerMinutesSpinner"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></Spinner>
+		<Spinner android:id="@+id/TimerSecondsSpinner"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></Spinner>
+	</LinearLayout>
+	<Button android:text="@string/submit_button" android:id="@+id/TimerDialogSubmitButton"
+		style="@style/FullWidthVertical"></Button>
+</LinearLayout>

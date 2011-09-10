@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<LinearLayout style="@style/FullWidthVertical">
+		<TextView android:text="@string/round_dialog_subtitle"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+		<Spinner android:id="@+id/RoundRoundsSpinner"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></Spinner>
+	</LinearLayout>
+	<TextView android:text="@string/round_dialog_subtitle2" style="@style/FullWidthVertical"></TextView>
+	<LinearLayout style="@style/FullWidthVertical">
+		<Spinner android:id="@+id/RoundMinutesSpinner"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></Spinner>
+		<Spinner android:id="@+id/RoundSecondsSpinner"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></Spinner>
+	</LinearLayout>
+	<Button android:text="@string/submit_button" android:id="@+id/RoundDialogSubmitButton"
+		style="@style/FullWidthVertical"></Button>
+</LinearLayout>
