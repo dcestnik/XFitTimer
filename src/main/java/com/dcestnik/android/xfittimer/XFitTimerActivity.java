@@ -32,13 +32,14 @@ public class XFitTimerActivity extends Activity {
     private int numberOfRounds;
     private int elapsedRounds = 1;
     private long startTime;
-    private MediaPlayer mp = MediaPlayer.create(this.getBaseContext(), R.raw.buzzer);    /** Called when the activity is first created. */
+    private MediaPlayer mp;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         chrono = (Chronometer) findViewById(R.id.Chrono);
+	mp = MediaPlayer.create(this.getApplicationContext(), R.raw.buzzer);
         findViewById(R.id.StartStopButton)
                 .setOnClickListener(startStopListener);
         findViewById(R.id.ResetButton).setOnClickListener(resetListener);
@@ -305,5 +306,11 @@ public class XFitTimerActivity extends Activity {
 
     private void playBuzzerSound() {
         mp.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mp.release();
     }
 }
