@@ -8,6 +8,9 @@
 	<string name="input_error_dialog_title">Invalid Input</string>
 	<string name="alert_dialog_button">OK</string>
 
+    <string name="countdown_title">Get Ready!</string>
+	<string name="countdown_message">Starting in %d seconds</string>
+
 	<string name="stopwatch_menu">Stop Watch</string>
 	<string name="stopwatch_subtitle">Stopwatch</string>
 

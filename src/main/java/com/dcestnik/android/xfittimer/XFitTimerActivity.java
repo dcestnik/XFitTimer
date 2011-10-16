@@ -40,8 +40,7 @@ public class XFitTimerActivity extends Activity {
         setContentView(R.layout.main);
         chrono = (Chronometer) findViewById(R.id.Chrono);
 	mp = MediaPlayer.create(this.getApplicationContext(), R.raw.buzzer);
-        findViewById(R.id.StartStopButton)
-                .setOnClickListener(startStopListener);
+        findViewById(R.id.StartStopButton).setOnClickListener(startStopListener);
         findViewById(R.id.ResetButton).setOnClickListener(resetListener);
     }
 
@@ -56,7 +55,7 @@ public class XFitTimerActivity extends Activity {
             if (clockRunning) {
                 stopChrono();
             } else {
-                startChrono();
+                displayCountDownDialog();
             }
         }
     };
@@ -78,8 +77,7 @@ public class XFitTimerActivity extends Activity {
 
     Chronometer.OnChronometerTickListener roundClickListener = new OnChronometerTickListener() {
         public void onChronometerTick(Chronometer chronometer) {
-            if ((getChronoSeconds() >= goalTime) && clockRunning
-                    && !onTickListenerRunning) {
+            if ((getChronoSeconds() >= goalTime) && clockRunning && !onTickListenerRunning) {
                 onTickListenerRunning = true;
                 if (elapsedRounds == numberOfRounds) {
                     stopChrono();
@@ -100,8 +98,7 @@ public class XFitTimerActivity extends Activity {
                 onTickListenerRunning = true;
                 if (inOffInterval && (getChronoSeconds() == timeOff)) {
                     ((LinearLayout) findViewById(R.id.MainLayout))
-                            .setBackgroundColor(getResources().getColor(
-                                    R.color.subtle_green));
+                            .setBackgroundColor(getResources().getColor(R.color.subtle_green));
                     inOffInterval = false;
                     if (elapsedRounds == numberOfRounds) {
                         stopChrono();
@@ -112,8 +109,7 @@ public class XFitTimerActivity extends Activity {
                         resetRound();
                     }
                 } else if (getChronoSeconds() == goalTime) {
-                    ((LinearLayout) findViewById(R.id.MainLayout))
-                            .setBackgroundColor(Color.BLACK);
+                    ((LinearLayout) findViewById(R.id.MainLayout)).setBackgroundColor(Color.BLACK);
                     resetRound();
                     inOffInterval = true;
                     playBuzzerSound();
@@ -136,7 +132,6 @@ public class XFitTimerActivity extends Activity {
             }
         }
     };
-
 
     OnDismissListener roundDialogDissmissListener = new OnDismissListener() {
         public void onDismiss(DialogInterface dialog) {
@@ -166,6 +161,20 @@ public class XFitTimerActivity extends Activity {
             }
         }
     };
+
+    OnDismissListener countDownDialogDissmissListener = new OnDismissListener() {
+        @Override
+        public void onDismiss(DialogInterface dialog) {
+            playBuzzerSound();
+            startChrono();
+        }
+    };
+
+    private void displayCountDownDialog() {
+        CountDownDialog countDownDialog = new CountDownDialog(this);
+        countDownDialog.setOnDismissListener(countDownDialogDissmissListener);
+        countDownDialog.show();
+    }
 
     private void displayInputErrorDialog() {
         AlertDialog alertDialog = new AlertDialog.Builder(this).create();
@@ -264,7 +273,6 @@ public class XFitTimerActivity extends Activity {
         ((LinearLayout) findViewById(R.id.MainLayout))
                 .setBackgroundColor(getResources().getColor(
                         R.color.subtle_green));
-
     }
 
     private void stopChrono() {

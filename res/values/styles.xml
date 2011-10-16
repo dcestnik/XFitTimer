@@ -9,6 +9,7 @@
 		<item name="android:textSize">36sp</item>
 		<item name="android:layout_width">wrap_content</item>
 		<item name="android:layout_height">wrap_content</item>
+		<item name="android:background">@android:color/transparent</item>
 	</style>
 	<style name="ChronoStyle" parent="@style/FullWidthVertical">
 		<item name="android:textSize">110sp</item>
@@ -19,4 +20,7 @@
 	<style name="ResetButtonStyle" parent="@style/StartStopButtonStyle">
 		<item name="android:textColor">#333</item>
 	</style>
+    <style name="CountDownStyle" parent="@style/FullWidthVertical">
+        <item name="android:textSize">24sp</item>
+    </style>
 </resources>
